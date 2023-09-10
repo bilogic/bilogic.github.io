@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FilePond Plugin Manage Metadata</title>
     <link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet">
-    <link href="./dist/filepond-plugin-manage-metadata.css" rel="stylesheet">
+    <link href="https://nielsboogaard.github.io/filepond-plugin-manage-metadata/dist/filepond-plugin-manage-metadata.css" rel="stylesheet">
     <link href="https://nielsboogaard.github.io/filepond-plugin-image-overlay/dist/filepond-plugin-image-overlay.css" rel="stylesheet">
     <link href="https://nielsboogaard.github.io/filepond-plugin-get-file/dist/filepond-plugin-get-file.css" rel="stylesheet">
     <style>
@@ -34,7 +33,7 @@
         <a onclick="enableAdditionalPlugins()">Enable additional plugins</a> | <a href="https://github.com/nielsboogaard/filepond-plugin-manage-metadata">Return to the source code</a>
     </div>
     
-    <script src="./dist/filepond-plugin-manage-metadata.js"></script>
+    <script src="https://nielsboogaard.github.io/filepond-plugin-manage-metadata/dist/filepond-plugin-manage-metadata.js"></script>
     <script src="https://unpkg.com/filepond/dist/filepond.js"></script>
     <script src="https://nielsboogaard.github.io/filepond-plugin-image-overlay/dist/filepond-plugin-image-overlay.js"></script>
     <script src="https://nielsboogaard.github.io/filepond-plugin-get-file/dist/filepond-plugin-get-file.js"></script>
@@ -60,7 +59,7 @@
                 labelButtonManageMetadata: 'Edit metadata', // by default 'Edit metadata'
                 onManageMetadata: (item) => console.log('onManageMetadata hook called', item) 
             });
-            pond.addFile('./nature.jpg');
+            pond.addFile('https://nielsboogaard.github.io/filepond-plugin-manage-metadata/nature.jpg');
         }
 
         init();
