@@ -57,7 +57,16 @@
             const pond = FilePond.create(inputElement, {
                 enableManageMetadata: true, // by default true, can be used to disable this plugin for a particular FilePond instance
                 labelButtonManageMetadata: 'Edit metadata', // by default 'Edit metadata'
-                onManageMetadata: (item) => console.log('onManageMetadata hook called', item) 
+                // onManageMetadata: (item) => console.log('onManageMetadata hook called', item) 
+                onManageMetadata: (file) => {
+        
+                let currentCaption = file.getMetadata('caption') ?? '';
+                let newCaption = window.prompt('Edit file caption', currentCaption);
+        
+                if (newCaption && newCaption != currentCaption) {
+                    file.setMetadata('caption', newCaption);
+                }
+            },
             });
             pond.addFile('https://nielsboogaard.github.io/filepond-plugin-manage-metadata/nature.jpg');
         }
